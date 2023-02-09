@@ -18,27 +18,8 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="{% url 'index' %}" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
-					</nav>
+				<!-- Header --> <!-- Menu -->
+                {% include 'fm100/header.html' %}
 
 				<!-- Main -->
 					<div id="main" class="alt">
@@ -47,30 +28,31 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>FM100 TEST</h1>
+										<h1>FM100 TEST - Phase 1</h1>
 									</header>
+                                    <br><br><br>
 {#                                    <span class="image fit"><img src="{% static 'images/pic03.jpg' %}" alt="" /></span>#}
                                     <div class="box alt">
                                         <div class="row gtr-50 gtr-uniform" style="justify-content: center">
-                                            <div class="col-1" ondrop="drop(event)" ondragover="allowDrop(event)" >
-                                                <img class="image fit" id="2" draggable="true" ondragstart="drag(event)" src="{% static 'images/2_ffa289.png' %}" alt="2" />
+
+                                            <div class="col-1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                                <img class="image fit" id="2" draggable="true" ondragstart="drag(event)" ondblclick="dclick(event)" src="{% static 'images/2_ffa289.png' %}" alt="2" />
                                             </div>
                                             <div class="col-1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <img class="image fit" id="3" draggable="true" ondragstart="drag(event)" src="{% static 'images/3_ffb98d.png' %}" alt="3" /></span>
+                                                <img class="image fit" id="3" draggable="true" ondragstart="drag(event)" src="{% static 'images/3_ffb98d.png' %}" alt="3" />
                                             </div>
                                             <div class="col-1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <img class="image fit" id="4" draggable="true" ondragstart="drag(event)" src="{% static 'images/4_fdb27b.png' %}" alt="4" /></span>
+                                                <img class="image fit" id="4" draggable="true" ondragstart="drag(event)" src="{% static 'images/4_fdb27b.png' %}" alt="4" />
                                             </div>
                                             <div class="col-1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <img class="image fit" id="5" draggable="true" ondragstart="drag(event)" src="{% static 'images/5_febd6d.png' %}" alt="5" /></span>
+                                                <img class="image fit" id="5" draggable="true" ondragstart="drag(event)" src="{% static 'images/5_febd6d.png' %}" alt="5" />
                                             </div>
                                             <div class="col-1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <img class="image fit" id="6" draggable="true" ondragstart="drag(event)" src="{% static 'images/6_fcc65c.png' %}" alt="6" /></span>
+                                                <img class="image fit" id="6" draggable="true" ondragstart="drag(event)" src="{% static 'images/6_fcc65c.png' %}" alt="6" />
                                             </div>
                                             <div class="col-1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <img class="image fit" id="7" draggable="true" ondragstart="drag(event)" src="{% static 'images/7_ffcf5c.png' %}" alt="7" /></span>
+                                                <img class="image fit" id="7" draggable="true" ondragstart="drag(event)" src="{% static 'images/7_ffcf5c.png' %}" alt="7" />
                                             </div>
-                                            <div class="col-1"><span class="image fit"><img src="" alt="" /></span></div>
 {#                                            <div draggable="true" class="col-1-2"><span class="image fit"><img src="{% static 'images/pic09.jpg' %}" alt="" /></span></div>##}
                                         </div>
                                     </div>
@@ -87,8 +69,18 @@
                                             <div class="col-1"><span class="image fit"><img src="{% static 'images/8_f3d962.png' %}" alt="" /></span></div>
                                         </div>
                                     </div>
+                                    <br><br><br>
+                                    <div class="box alt">
+                                        <div class="row gtr-50 gtr-uniform" style="justify-content: center">
+                                            <ul class="actions">
+                                                <li><a href="#" class="button large">Reset</a></li>
+                                                <li><a href="#" class="button primary large">Next</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
 
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+
 								</div>
 							</section>
 

@@ -25,8 +25,8 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/polls/templates" />
         <option value="$MODULE_DIR$/fm100/templates" />
+        <option value="$MODULE_DIR$/common/templates" />
       </list>
     </option>
   </component>
