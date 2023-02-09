@@ -25,25 +25,37 @@
 					<div id="main" class="alt">
                         <div class="inner">
                             <header class="major">
-                                <h2>Login</h2>
+                                <h2>Register</h2>
                             </header>
                             <div class="row">
                                 <!-- Break -->
-                                <form method="post" action="#">
+                                <form method="post" action="{% url 'common:signup' %}">{% csrf_token %}
+                                    {% include 'form_error.html' %}
                                     <div class="row gtr-uniform">
                                         <div class="col-2 col-2-xsmall"><h4 style="vertical-align: center">ID</h4></div>
                                         <div class="col-10 col-10-xsmall">
-                                            <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                                            <input type="text" class='form-control' name="username" id="username"
+                                                   value="{{ form.username.value|default_if_none:'' }}" placeholder="USER ID" />
                                         </div>
                                         <div class="col-2 col-2-xsmall"><h4>PASSWORD</h4></div>
                                         <div class="col-10 col-10-xsmall">
-                                            <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                                            <input type="password" class="form-control" name="password1" id="password1"
+                                                   value="{{ form.password1.value|default_if_none:'' }}" placeholder="PASSWORD" />
+                                        </div>
+                                        <div class="col-2 col-2-xsmall"><h4>VALIDATION</h4></div>
+                                        <div class="col-10 col-10-xsmall">
+                                            <input type="password" class="form-control" name="password2" id="password2"
+                                                   value="{{ form.password2.value|default_if_none:'' }}" placeholder="VALIDATE PASSWORD" />
+                                        </div>
+                                        <div class="col-2 col-2-xsmall"><h4>EMAIL</h4></div>
+                                        <div class="col-10 col-10-xsmall">
+                                            <input type="text" class="form-control" name="email" id="email"
+                                                   value="{{ form.email.value|default_if_none:'' }}" placeholder="EMAIL ADDRESS" />
                                         </div>
                                         <!-- Break -->
                                         <div class="col-12">
                                             <ul class="actions" style="justify-content: right">
-                                                <li><input type="submit" value="FIND ID/PASSWORD" class="primary" /></li>
-                                                <li><input type="reset" value="LOGIN" /></li>
+                                                <li><input type="submit" value="REGISTER" /></li>
                                             </ul>
                                         </div>
                                     </div>
